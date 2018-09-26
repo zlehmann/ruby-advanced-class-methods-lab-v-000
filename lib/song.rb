@@ -11,6 +11,6 @@ class Song
   end
 
   def self.create
-    self.class.initialize
+    created_song = Song.new
   end
 end

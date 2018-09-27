@@ -51,4 +51,11 @@ class Song
     sorted_songs = Song.all.sort_by {|song| song.name}
     sorted_songs
   end
+
+  def self.new_from_filename(filename)
+        split_filename = filename.split(%r/( - )|[.]/)
+        name = split_filename[2]
+        artist = split_filename[0]
+        created_song = Song.new(name, artist)
+  end
 end

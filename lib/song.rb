@@ -36,4 +36,13 @@ class Song
     found_song = Song.all.find{|song| song.name == name}
     found_song
   end
+
+  def self.find_or_create_by_name(name)
+    found_song = self.find_by_name(name)
+    if found_song.length > 0
+      found_song
+    else
+      created_song = self.create_by_name(name)
+      created_song
+    end
 end

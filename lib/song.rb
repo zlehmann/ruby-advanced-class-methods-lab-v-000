@@ -38,11 +38,11 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    found_song = self.find_by_name(name)
+    found_song = self.class.find_by_name(name)
     if found_song.empty? == true
       found_song
     else
-      created_song = self.create_by_name(name)
+      created_song = self.class.create_by_name(name)
       created_song
     end
   end

@@ -30,4 +30,5 @@ class Song
     created_song = Song.new(name, "")
     self.save
     created_song
+  end
 end

@@ -57,5 +57,6 @@ class Song
         name = split_filename[2]
         artist = split_filename[0]
         created_song = Song.new(name, artist)
+        created_song
   end
 end
